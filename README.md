@@ -2,7 +2,7 @@
 
 > A podcast application evolving from a React frontend into a full-stack application with authentication, persistent user data, and a PostgreSQL backend.
 
-[Link to Site](ludwe-podcastapp.vercel.app)
+[Link to Site]([ludwe-podcastapp.vercel.app](https://ludwe-podcastapp.vercel.app/))
 **🚧 Currently in development**
 
 ---
