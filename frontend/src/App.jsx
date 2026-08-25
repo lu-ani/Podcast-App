@@ -65,7 +65,7 @@ export default function App({ podcasts: initialPodcasts = null }) {
 
   //dark mode
   const [dark, setDark] = useState(
-    () => localStorage.getItem("theme") === "dark"
+    () => localStorage.getItem("theme") === "dark",
   );
 
   /** --------------------
@@ -129,7 +129,7 @@ export default function App({ podcasts: initialPodcasts = null }) {
   const totalPages = Math.max(1, Math.ceil(processed.length / ITEMS_PER_PAGE));
   const visibleItems = processed.slice(
     (page - 1) * ITEMS_PER_PAGE,
-    page * ITEMS_PER_PAGE
+    page * ITEMS_PER_PAGE,
   );
 
   // Shuffle array randomly
@@ -248,7 +248,7 @@ export default function App({ podcasts: initialPodcasts = null }) {
       </header>
 
       {/*Random podcast*/}
-      <h2 className=" mt-[50%] md:mt-[18%] lg:mt-[13.5%] xl:mt-[10%] font-bold">
+      {/*<h2 className=" mt-[50%] md:mt-[18%] lg:mt-[13.5%] xl:mt-[10%] font-bold">
         Recommended shows:
       </h2>
       <div className="flex-row overflow-x-auto overflow-y-hidden whitespace-nowrap">
@@ -262,10 +262,10 @@ export default function App({ podcasts: initialPodcasts = null }) {
             />
           ))}
         </div>
-      </div>
+      </div>*/}
 
       {/* Podcast Grid */}
-      <main className="p-6">
+      <main className="mt-60 lg:mt-25 md:mt-40 sm:mt-50 p-6">
         {processed.length === 0 ? (
           <div className="text-center text-gray-600 mt-20">
             No podcasts match your criteria.

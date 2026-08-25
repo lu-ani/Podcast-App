@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
   // Load initial state from localStorage or default to light
-  const [dark, setDark] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const [dark, setDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -24,7 +24,7 @@ export default function ThemeToggle() {
       className="ml-auto cursor-pointer select-none px-3 py-1.5 rounded bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
       onClick={toggleTheme}
     >
-      {dark ? "🌙" : "☀️"}
+      {dark ? "☀️" : "🌙"}
     </div>
   );
 }
